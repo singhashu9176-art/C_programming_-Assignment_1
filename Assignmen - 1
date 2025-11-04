@@ -1,0 +1,212 @@
+//QUESTION NO.1.
+//What do you mean by arrays give one example of array and how you can declared an array ? //
+
+ // An array is a collection of elements of the same data type stored in contiguous memory locations.
+//Each element in an array is accessed using an index.
+
+//Example and Declaration:
+//
+
+int  numbers[5] = {10, 20, 30, 40, 50};
+printf("The first element is : %d\n", numbers[0]);
+printf("The second element is : %d\n", numbers[2]);
+
+
+
+ //   Question No. 2.    //
+// what do you mean by functions? Write the types of functions and give one example in code of each type. //
+
+// Answer - A function is a block of code that performs a specific task.
+//Functions help in code reusability and better program organization.!!
+
+//Types of Functions:
+
+//Library (Built-in) Functions – Provided by C libraries.
+
+//User-defined Functions – Created by the programmer. //
+
+ //  1. No Arguments , No return value
+ 
+void greet() {
+printf("Hello! Welcome to functions.\n");
+}
+
+int main() {
+    
+ greet();
+     return 0;
+}
+
+// 2. Arguments, No return value
+
+    void sum(int a, int b) {
+        
+    printf("Sum = %d\n", a + b);
+}
+
+  
+      sum(5, 10);
+
+
+ // 3.  No arguments, Return value 
+ 
+       int getNumber() {
+  return 20;
+}
+
+    
+        
+     int num = getNumber();
+     
+     printf("Number = %d\n", num);
+     
+
+
+ // 4.  Arguments , return values
+ 
+    int add(int a, int b) {
+      return a + b;
+    }
+
+        
+        int result = add(7, 3);
+        printf("Result = %d\n", result);
+        
+ 
+   
+     //  Question no. 3    
+//What do you mean by pointers ? Write a code how you can initialise the pointer. //
+// Answer -
+//A pointer is a variable that stores the memory address of another variable.
+//It allows direct memory access and manipulation. //
+
+int x = 10;       // normal variable
+int *ptr;          // pointer declaration
+
+ptr = &x;     // pointer initialization (storing address of x)
+
+printf("Value of x = %d\n", x);
+printf("Address of x = %p\n", &x);
+printf("Pointer ptr stores = %p\n", ptr);
+printf("Value pointed by ptr = %d\n", *ptr);    // dereferencing pointer
+
+
+//    Question no. 4  
+//What are the types of arrays? Write in a code 1D & 2D included. //
+
+// Answer -
+
+ //There are mainly two types of arrays in C:
+//One-Dimensional Array (1D)
+
+//Two-Dimensional Array (2D)
+//
+
+// 1D Array
+int arr1D[5] = {10, 20, 30, 40, 50};
+
+// 2D Array
+int arr2D[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+
+// Printing 1D Array
+printf("1D Array elements:\n");
+for(int i = 0; i < 5; i++) {
+    printf("%d ", arr1D[i]);
+}
+
+printf("\n\n2D Array elements:\n");
+
+// Printing 2D Array
+for(int i = 0; i < 2; i++) {
+    for(int j = 0; j < 3; j++) {
+        printf("%d ", arr2D[i][j]);
+    }
+    printf("\n");
+}
+
+
+
+// Question no.5  
+//Explain the types of operator in code //
+
+int a = 10, b = 5;
+
+// Arithmetic Operators
+printf("Arithmetic:\n");
+printf("a + b = %d\n", a + b);
+printf("a - b = %d\n", a - b);
+printf("a * b = %d\n", a * b);
+printf("a / b = %d\n", a / b);
+printf("a %% b = %d\n\n", a % b);
+
+// Relational Operators
+printf("Relational:\n");
+printf("a > b = %d\n", a > b);
+printf("a == b = %d\n\n", a == b);
+
+// Logical Operators
+printf("Logical:\n");
+printf("(a > 5 && b < 10) = %d\n", (a > 5 && b < 10));
+printf("(a < 5 || b < 3) = %d\n\n", (a < 5 || b < 3));
+
+// Assignment Operator
+printf("Assignment:\n");
+a += 3; // a = a + 3
+printf("a += 3 → a = %d\n\n", a);
+
+// Increment / Decrement
+printf("Increment/Decrement:\n");
+a++; 
+b--;
+printf("a++ = %d\n", a);
+printf("b-- = %d\n\n", b);
+
+// Ternary Operator
+printf("Ternary Operator:\n");
+int max = (a > b) ? a : b;
+printf("Max = %d\n", max);
+
+return 0;  
+The first element is : 10
+The second element is : 30
+Hello! Welcome to functions.
+Sum = 15
+Number = 20
+Result = 10
+Value of x = 10
+Address of x = (some memory address)
+Pointer ptr stores = (same memory address)
+Value pointed by ptr = 10
+1D Array elements:
+10 20 30 40 50
+
+2D Array elements:
+1 2 3 
+4 5 6 
+Arithmetic:
+a + b = 15
+a - b = 5
+a * b = 50
+a / b = 2
+a % b = 0
+
+Relational:
+a > b = 1
+a == b = 0
+
+Logical:
+(a > 5 && b < 10) = 1
+(a < 5 || b < 3) = 0
+
+Assignment:
+a += 3 → a = 13
+
+Increment/Decrement:
+a++ = 14
+b-- = 4
+
+Ternary Operator:
+Max = 14
